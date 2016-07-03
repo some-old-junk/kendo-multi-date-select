@@ -108,10 +108,18 @@
         },
 
         enable: function (enable) {
+            if (!enable) {
+                this.close();
+            }
+
             this._multiSelect.enable(enable);
         },
 
         readonly: function (readonly) {
+            if (readonly) {
+                this.close();
+            }
+
             this._multiSelect.readonly(readonly);
         },
 
