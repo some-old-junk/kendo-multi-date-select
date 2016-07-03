@@ -30,91 +30,91 @@ $("#multiDateSelect").kendoMultiDateSelect({
 ___
 
 #### autoClose
-boolean (default: true)<br/>If true calendar will be closed on date selection.
+`boolean` (default: true)<br/>If true calendar will be closed on date selection.
 
 #### popup 
-Object (default: {})<br/>Options for calendar popup initialization.
+`Object` (default: {})<br/>Options for calendar popup initialization.
 
 #### animation 
-Object | false (default: {})<br/>Options for calendar popup animation.
+`Object | false` (default: {})<br/>Options for calendar popup animation.
 
 #### enable 
-boolean (default: true)<br/>If false user input won't be allowed.
+`boolean` (default: true)<br/>If false user input won't be allowed.
 
 #### maxSelectedItems 
-number (default: null)<br/>Defines the limit of selected items unless null.
+`number` (default: null)<br/>Defines the limit of selected items unless null.
 
 #### placeholder
-string (default: '')<br/>Placeholder for empty input.
+`string` (default: '')<br/>Placeholder for empty input.
 
 #### tagTemplate 
-string | ((data: Date) => string) (default: '')<br/>Template for rendering tags, if not specified 'format' option will be used to render tags.
+`string | ((data: Date) => string)` (default: '')<br/>Template for rendering tags, if not specified 'format' option will be used to render tags.
 
 #### format
-string (default: 'M/d/yyyy')<br/>Defines format for parsing user input and displaying tags if 'tagTemplate' option is not specified.
+`string` (default: 'M/d/yyyy')<br/>Defines format for parsing user input and displaying tags if 'tagTemplate' option is not specified.
 
 #### values
-Date\[\] (default: null)<br/>Initial selected dates.
+`Date[]` (default: null)<br/>Initial selected dates.
 
 #### footer
-string | false | ((data: Date) => string) (default: '')<br/>Template for rendering calendar footer.
+`string | false | ((data: Date) => string)` (default: '')<br/>Template for rendering calendar footer.
  
 #### culture 
-string (default: '')<br/>Calendar culture ('en-US', 'de-DE', etc.).
+`string` (default: '')<br/>Calendar culture ('en-US', 'de-DE', etc.).
 
 #### min
-Date (default: new Date(1900, 0, 1))<br/>Minimum date that can be selected.
+`Date` (default: new Date(1900, 0, 1))<br/>Minimum date that can be selected.
 
 #### max
-Date (default: new Date(2099, 11, 31))<br/>Maximum date that can be selected.
+`Date` (default: new Date(2099, 11, 31))<br/>Maximum date that can be selected.
 
 #### start
-string (default: 'month')<br/>Specifies calendar start view.
+`string` (default: 'month')<br/>Specifies calendar start view.
 
 #### depth
-string (default: 'month')<br/>Specifies calendar navigation depth.
+`string` (default: 'month')<br/>Specifies calendar navigation depth.
 
 #### month
-Object (default: {})<br/>Specifies calendar templates for the cells.
+`Object` (default: {})<br/>Specifies calendar templates for the cells.
  
 #### dates 
-Date\[\] (default: [])<br/>Special calendar dates, which will be passed to month template.
+`Date[]` (default: [])<br/>Special calendar dates, which will be passed to month template.
 
 ### Methods
 ___
 
 #### close
-() => void<br/>Closes calendar popup.
+`() => void`<br/>Closes calendar popup.
 
 #### open
-() => void<br/>Opens calendar popup.
+`() => void`<br/>Opens calendar popup.
 
 #### toggle
-() => void<br/>Toggles calendar popup.
+`() => void`<br/>Toggles calendar popup.
 
 #### destroy
-() => void<br/>Destroys the widget with underlying calendar and multi-select widgets.
+`() => void`<br/>Destroys the widget with underlying calendar and multi-select widgets.
 
 #### enable
-(enable: boolean) => void<br/>Enables or disables multi-select.
+`(enable: boolean) => void`<br/>Enables or disables multi-select.
  
 #### readonly
-(enable: boolean) => void<br/>Changes multi-select 'readonly' state.
+`(enable: boolean) => void`<br/>Changes multi-select 'readonly' state.
 
 #### min
-(min: Date) => Date<br/>Gets/sets the min value of the calendar.
+`(min: Date) => Date`<br/>Gets/sets the min value of the calendar.
 
 #### max
-(max: Date) => Date<br/>Gets/sets the max value of the calendar.
+`(max: Date) => Date`<br/>Gets/sets the max value of the calendar.
 
 #### values
-(values: Date[]) => Date[]<br/>Gets/sets selected values.
+`(values: Date[]) => Date[]`<br/>Gets/sets selected values.
 
 #### multiSelect
-() => MultiSelect<br/>Gets underlying multi-select widget.
+`() => MultiSelect`<br/>Gets underlying multi-select widget.
 
 #### multiCalendar
-() => MultiCalendar<br/>Gets underlying calendar widget.
+`() => MultiCalendar`<br/>Gets underlying calendar widget.
 
 ### Events
 ___
