@@ -57,10 +57,9 @@
             autoClose: true,
             popup: {},
             animation: {},
-            enabled: true,
+            enable: true,
             maxSelectedItems: null,
             placeholder: '',
-            height: 200,
             tagTemplate: '',
             values: null,
             footer: '',
@@ -108,8 +107,8 @@
             this._multiCalendar.destroy();
         },
 
-        enable: function (enabled) {
-            this._multiSelect.enable(enabled);
+        enable: function (enable) {
+            this._multiSelect.enable(enable);
         },
 
         readonly: function (readonly) {
@@ -238,7 +237,7 @@
             var that = this;
             var options = that.options;
 
-            var tagTemplate = function (data) {
+            options.tagTemplate = options.tagTemplate || function (data) {
                 return kendo.toString(data, options.format);
             };
 
@@ -262,10 +261,9 @@
                     dataSource: options.values,
                     value: options.values,
                     ignoreCase: false,
-                    enabled: options.enabled,
+                    enable: options.enable,
                     maxSelectedItems: options.maxSelectedItems,
                     placeholder: options.placeholder,
-                    height: options.height,
                     tagTemplate: tagTemplate,
                     open: open,
                     change: change
