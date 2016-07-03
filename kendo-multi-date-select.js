@@ -71,7 +71,7 @@
             start: 'month',
             depth: 'month',
             month : {},
-            dates: [],
+            dates: []
         },
 
         events: [
@@ -99,7 +99,7 @@
         },
 
         destroy: function () {
-            that._multiSelect.wrapper
+            this._multiSelect.wrapper
                 .find('input')
                 .off('keydown');
 
