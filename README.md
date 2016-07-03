@@ -54,7 +54,7 @@ string | ((data: Date) => string) (default: '')<br/>Template for rendering tags,
 string (default: 'M/d/yyyy')<br/>Defines format for parsing user input and displaying tags if 'tagTemplate' option is not specified.
 
 #### values
-Date[] (default: null)<br/>Initial selected dates.
+Date\[\] (default: null)<br/>Initial selected dates.
 
 #### footer
 string | false | ((data: Date) => string) (default: '')<br/>Template for rendering calendar footer.
@@ -78,7 +78,7 @@ string (default: 'month')<br/>Specifies calendar navigation depth.
 Object (default: {})<br/>Specifies calendar templates for the cells.
  
 #### dates 
-Date[] (default: [])<br/>Special calendar dates, which will be passed to month template.
+Date\[\] (default: [])<br/>Special calendar dates, which will be passed to month template.
 
 ### Methods
 ___
