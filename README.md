@@ -29,106 +29,106 @@ $("#multiDateSelect").kendoMultiDateSelect({
 ### Configuration
 ___
 
-#### autoClose
+##### autoClose
 `boolean` (default: true)<br/>If true calendar will be closed on date selection.
 
-#### popup 
+##### popup 
 `Object` (default: {})<br/>Options for calendar popup initialization.
 
-#### animation 
+##### animation 
 `Object | false` (default: {})<br/>Options for calendar popup animation.
 
-#### enable 
+##### enable 
 `boolean` (default: true)<br/>If false user input won't be allowed.
 
-#### maxSelectedItems 
+##### maxSelectedItems 
 `number` (default: null)<br/>Defines the limit of selected items unless null.
 
-#### placeholder
+##### placeholder
 `string` (default: '')<br/>Placeholder for empty input.
 
-#### tagTemplate 
+##### tagTemplate 
 `string | ((data: Date) => string)` (default: '')<br/>Template for rendering tags, if not specified 'format' option will be used to render tags.
 
-#### format
+##### format
 `string` (default: 'M/d/yyyy')<br/>Defines format for parsing user input and displaying tags if 'tagTemplate' option is not specified.
 
-#### values
+##### values
 `Date[]` (default: null)<br/>Initial selected dates.
 
-#### footer
+##### footer
 `string | false | ((data: Date) => string)` (default: '')<br/>Template for rendering calendar footer.
  
-#### culture 
+##### culture 
 `string` (default: '')<br/>Calendar culture ('en-US', 'de-DE', etc.).
 
-#### min
+##### min
 `Date` (default: new Date(1900, 0, 1))<br/>Minimum date that can be selected.
 
-#### max
+##### max
 `Date` (default: new Date(2099, 11, 31))<br/>Maximum date that can be selected.
 
-#### start
+##### start
 `string` (default: 'month')<br/>Specifies calendar start view.
 
-#### depth
+##### depth
 `string` (default: 'month')<br/>Specifies calendar navigation depth.
 
-#### month
+##### month
 `Object` (default: {})<br/>Specifies calendar templates for the cells.
  
-#### dates 
+##### dates 
 `Date[]` (default: [])<br/>Special calendar dates, which will be passed to month template.
 
 ### Methods
 ___
 
-#### close
+##### close
 `() => void`<br/>Closes calendar popup.
 
-#### open
+##### open
 `() => void`<br/>Opens calendar popup.
 
-#### toggle
+##### toggle
 `() => void`<br/>Toggles calendar popup.
 
-#### destroy
+##### destroy
 `() => void`<br/>Destroys the widget with underlying calendar and multi-select widgets.
 
-#### enable
+##### enable
 `(enable: boolean) => void`<br/>Enables or disables multi-select.
  
-#### readonly
+##### readonly
 `(enable: boolean) => void`<br/>Changes multi-select 'readonly' state.
 
-#### min
+##### min
 `(min: Date) => Date`<br/>Gets/sets the min value of the calendar.
 
-#### max
+##### max
 `(max: Date) => Date`<br/>Gets/sets the max value of the calendar.
 
-#### values
+##### values
 `(values: Date[]) => Date[]`<br/>Gets/sets selected values.
 
-#### multiSelect
+##### multiSelect
 `() => MultiSelect`<br/>Gets underlying multi-select widget.
 
-#### multiCalendar
+##### multiCalendar
 `() => MultiCalendar`<br/>Gets underlying calendar widget.
 
 ### Events
 ___
 
-#### navigate
+##### navigate
 Fires when calendar view is changed.
 
-#### change
+##### change
 Fires when the selected dates are changed.
 
-#### open
+##### open
 Fires when calendar popup opens.
 
-#### close
+##### close
 Fires when calendar popup closes.
 
 ## Tests

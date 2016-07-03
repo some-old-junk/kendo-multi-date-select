@@ -4,7 +4,6 @@
     var ui = kendo.ui;
     var Widget = ui.Widget;
     var extend = $.extend;
-    var Popup = ui.Popup;
     var keys = kendo.keys;
 
     var navigateEvent = 'navigate';
