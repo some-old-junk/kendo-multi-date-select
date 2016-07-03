@@ -264,7 +264,7 @@
                     enable: options.enable,
                     maxSelectedItems: options.maxSelectedItems,
                     placeholder: options.placeholder,
-                    tagTemplate: tagTemplate,
+                    tagTemplate: options.tagTemplate,
                     open: open,
                     change: change
                 })
