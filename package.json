@@ -24,6 +24,7 @@
   "homepage": "https://github.com/iyegoroff/kendo-multi-date-select#readme",
   "devDependencies": {
     "intern": "^3.2.3",
+    "selenium-server": "^2.53.1",
     "uglify-js": "^2.6.4"
   }
 }
