@@ -6,7 +6,6 @@ dist: trusty
 addons:
   packages:
     - unzip
-    - google-chrome-stable
 
 node_js:
   - '4.2'
@@ -16,7 +15,6 @@ before_install:
   - unzip chromedriver_linux64.zip
   - sudo chmod u+x chromedriver
   - sudo mv chromedriver /usr/bin/
-  - google-chrome --version
 
 before_script:
   - "export DISPLAY=:99.0"
