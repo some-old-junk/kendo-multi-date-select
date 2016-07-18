@@ -1,7 +1,8 @@
 
 define({
 	environments: [
-		{ browserName: 'firefox' }
+		{ browserName: 'firefox' },
+        { browserName: 'chrome' }
 	],
 
 	maxConcurrency: 2,
