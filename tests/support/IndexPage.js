@@ -148,10 +148,10 @@ function (require, keys) {
         multiSelectSelectedDates: function () {
             return this.remote
                 .execute(function () {
-                    var dates = $('span[unselectable="on"]:not(.k-select):not(.k-icon)')
+                    var dates = $('.k-button > span:not(.k-select)')
                         .get()
                         .map(function (elem) {
-                            return new Date(elem.innerText);
+                            return new Date(elem.textContent);
                         });
 
                     return JSON.stringify(dates);

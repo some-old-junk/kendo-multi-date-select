@@ -5,7 +5,7 @@ define({
 		{ browserName: 'firefox' }
 	],
 
-	maxConcurrency: 1,
+	maxConcurrency: 2,
 
 	tunnel: 'NullTunnel',
 
