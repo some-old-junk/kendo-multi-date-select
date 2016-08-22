@@ -30,9 +30,9 @@
         return removeTime(first).getTime() < removeTime(second).getTime();
     }
 
-    function isDatesEqual(first, second) {
-        return removeTime(first).getTime() === removeTime(second).getTime();
-    }
+    // function isDatesEqual(first, second) {
+    //     return removeTime(first).getTime() === removeTime(second).getTime();
+    // }
 
     var MultiDateSelect = Widget.extend({
         _multiSelect: null,
@@ -159,12 +159,12 @@
                 that._multiCalendar.values(vs);
                 that._updateMultiSelectValues(vs);
 
-                that._multiCalendar.navigate(
-                    vs.length ? vs[vs.length - 1] : new Date()
-                );
+                if (vs.length) {
+                    that._multiCalendar.navigate(vs[vs.length - 1]);
+                }
             }
 
-            return this._multiCalendar.values();
+            return this._multiSelect.value();
         },
 
         multiSelect: function () {

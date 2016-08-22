@@ -4,8 +4,8 @@
   "description": "Kendo UI plugin for selecting multiple dates similar to MultiSelect.",
   "main": "kendo-multi-date-select.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepublish": "uglifyjs -c -m -o kendo-multi-date-select.min.js kendo-multi-date-select.js"
+    "test": "node node_modules/selenium-server/bin/selenium & node_modules/.bin/intern-runner config=tests/intern",
+    "prepublish": "uglifyjs -c -m -o dist/kendo-multi-date-select.min.js src/kendo-multi-date-select.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/iyegoroff/kendo-multi-date-select#readme",
   "devDependencies": {
+    "coveralls": "^2.11.12",
     "intern": "^3.2.3",
     "selenium-server": "^2.53.1",
     "uglify-js": "^2.6.4"

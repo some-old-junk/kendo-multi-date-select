@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta content="utf-8">
+    <title>Kendo UI multi date select example</title>
+    <link href="http://kendo.cdn.telerik.com/2016.2.504/styles/kendo.common.min.css" rel="stylesheet" />
+    <link href="http://kendo.cdn.telerik.com/2016.2.504/styles/kendo.default.min.css" rel="stylesheet" />
+    <script src="http://kendo.cdn.telerik.com/2016.2.504/js/jquery.min.js"></script>
+    <script src="http://kendo.cdn.telerik.com/2016.2.504/js/kendo.ui.core.min.js"></script>
+    <script src="http://cdn.rawgit.com/iyegoroff/kendo-multi-calendar/8828ea8d7f194e11f2ecb6fb34131a54df0fd1ad/kendo-multi-calendar.min.js"></script>
+    <script src="./kendo-multi-date-select.js"></script>
+    <script>
+
+        $(function () {
+          $("#multiDateSelect").kendoMultiDateSelect({
+            autoClose: false
+          });
+        });
+
+     </script>
+  </head>
+  <body>
+      <div id="multiDateSelect"></div>
+      <div id="outside" style="float: right">outside</div>
+  </body>
+</html>

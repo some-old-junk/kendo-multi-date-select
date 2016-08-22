@@ -1,15 +1,17 @@
 
 define({
 	environments: [
-		{ browserName: 'firefox' },
-        { browserName: 'chrome' }
+		{ browserName: 'chrome' },
+		{ browserName: 'firefox' }
 	],
 
 	maxConcurrency: 2,
 
 	tunnel: 'NullTunnel',
 
+	reporters: ['Runner', 'Lcov'],
+
 	functionalSuites: [ 'tests/functional/index' ],
 
-	excludeInstrumentation: /^(?:tests|node_modules|\.idea|kendo-multi-date-select\.min\.js|LICENSE|package\.json|README\.md)\//
+	excludeInstrumentation: /^(?:tests|node_modules|\.idea|dist)\//
 });

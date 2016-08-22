@@ -23,3 +23,5 @@ before_script:
   - sleep 3
   
 script: node_modules/.bin/intern-runner config=tests/intern
+
+after_script: "cat lcov.info | node_modules/coveralls/bin/coveralls.js"
