@@ -135,5 +135,9 @@ Fires when calendar popup closes.
 
 ## Tests
 
-TODO
+Tested with Intern.js.
+
+## Contributing
+
+Add tests for any new or changed functionality.
 
