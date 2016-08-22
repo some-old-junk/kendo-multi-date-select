@@ -18,19 +18,23 @@ function (bdd, expect, IndexPage) {
     };
 
     var checkDates = function (indexPage, expected) {
+        console.log(expected[1]);
 
         return indexPage.selectedDates()
             .then(function (dates) {
+                console.log(dates[1]);
                 expect(datesToStrings(dates)).to.have.all.members(datesToStrings(expected));
 
                 return indexPage.multiSelectSelectedDates();
             })
             .then(function (dates) {
+                console.log(dates[1]);
                 expect(datesToStrings(dates)).to.have.all.members(datesToStrings(expected));
 
                 return indexPage.calendarSelectedDates();
             })
             .then(function (dates) {
+                console.log(dates[1]);
                 expect(datesToStrings(dates)).to.have.all.members(datesToStrings(expected));
             });
     };
