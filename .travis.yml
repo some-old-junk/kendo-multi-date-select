@@ -1,27 +1,57 @@
 language: node_js
 
-sudo: required
-dist: trusty
+matrix:
+  fast_finish: true
+  include:
+    - env: TEST='minimal'
+      node_js: '7'
+    - env: TEST='normal'
+      node_js: '7'
+  allow_failures:
+    - env: TEST='normal'
 
 addons:
-  packages:
-    - unzip
+  sauce_connect: true
 
-node_js:
-  - '4.2'
+branches:
+  only:
+    - master
+    - /^v\d+\.\d+\.\d+$/
 
-before_install:
-  - wget http://chromedriver.storage.googleapis.com/2.21/chromedriver_linux64.zip
-  - unzip chromedriver_linux64.zip
-  - sudo chmod u+x chromedriver
-  - sudo mv chromedriver /usr/bin/
+before_deploy:
+  - cp ./dist/kendo-multi-date-select.min.js ./public/kendo-multi-date-select.min.js
+  - cp ./node_modules/keno-multi-calendar/dist/kendo-multi-calendar.min.js ./public/kendo-multi-calendar.min.js
+
+deploy:
+  - provider: npm
+    email: iegoroff@gmail.com
+    api_key:
+      secure: >
+        B6f0CpXjvJMEH1+2Imq577csu//vuGZAuPsHgnPOHCnQof1zgC2iEAwlzbOkZqH69+FKIn4vHsgiVCSB47s9nKJpJOLKjm5C25ePgp9r3XWzD8p
+        bWZqnyiwZnQXLjueIKcVULQ76DxtXkI5iQxmLAZJeCVJz8OXJEItdY6ufVzsPZ4N0x2InQSsbJN9/v8DReAvQV4VBALO+OYyVbiCcxs5elxPcwf
+        X4pS7V9YxA1UI+u7f1Tk4DhhxpHOpEky42BM3y+n9B7n8haCZ5Tv2JfXoAsIG4hihZa8f99mvqLOCRC31bV/FPQY6UrqHAWCIs1kzf0PSz997xq
+        /Fo9fqwCE78JLjuYP8YMXt/mMOITWr2iZCNg3UrqBLEEFiQF6hZf9ebTQfJoOrYFvgBUi9+KqjwDH1lwrn0ifsXf2nRNH1HKNAek3CFysOJifrO
+        SU7quTd0CQU9BVhVpAz1VFITf6K4Si7FdFMcqvBflXZ2y5uFzlxG3blwwHB2CsEeh5VcyvzI9BPofR3TBIxsqynYputqiXHeo7etb+CbGT4MKeM
+        nBRX8hiqmtvkjPgrZh38C/k3ghzglqfgYx5wtlr2mVpZ9OKQonedt+xYwZvVJz4q47mJTbrrCG9oPnwW7oAlzimpqZkS23BwrtmSJ690CpVp3/5
+        B+iGqRvS7jDbvbX7g=
+    skip_cleanup: true
+    on:
+      tags: true
+      condition: $TEST == 'minimal'
+  - provider: surge
+    project: ./public/
+    domain: kendo-multi-date-select.surge.sh  
+    skip_cleanup: true
+    on:
+      tags: true
+      condition: $TEST == 'minimal'
+
 
 before_script:
-  - "export DISPLAY=:99.0"
-  - "sh -e /etc/init.d/xvfb start"
-  - node node_modules/selenium-server/bin/selenium &
-  - sleep 5
-  
-script: node_modules/.bin/intern-runner config=tests/intern
+  npm run build
 
-after_script: "cat lcov.info | node_modules/coveralls/bin/coveralls.js"
+script:
+  - if [[ $TEST == 'minimal' ]]; then npm run test:ci:minimal; fi
+  - if [[ $TEST == 'normal' ]]; then npm run test:ci:normal; fi
+after_script:
+  if [[ $TEST == 'minimal' ]]; then npm run coverage; fi

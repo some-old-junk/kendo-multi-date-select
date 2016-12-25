@@ -2,11 +2,27 @@
   "name": "kendo-multi-date-select",
   "version": "1.0.0",
   "description": "Kendo UI plugin for selecting multiple dates similar to MultiSelect.",
-  "main": "kendo-multi-date-select.js",
+  "main": "dist/kendo-multi-date-select.js",
+  "types": "dist/kendo-multi-date-select.d.ts",
   "scripts": {
-    "test": "node node_modules/selenium-server/bin/selenium & node_modules/.bin/intern-runner config=tests/intern",
-    "prepublish": "uglifyjs -c -m -o dist/kendo-multi-date-select.min.js src/kendo-multi-date-select.js"
+    "preversion": "npm run clean && npm run reinstall && npm run build && npm test",
+    "postversion": "git add -A . && git push && git push --tags",
+    "build": "tsc && uglifyjs -c -m -o ./dist/kendo-multi-date-select.min.js ./dist/kendo-multi-date-select.js",
+    "reinstall": "rm -rf node_modules && npm i",
+    "clean": "rm -rf dist build coverage",
+    "test": "npm run lint && npm run test:local",
+    "test:local": "npm run build:tests && intern-runner config=build/tests/intern",
+    "test:ci:minimal": "npm run build:tests && intern-runner config=build/tests/intern-ci-minimal",
+    "test:ci:normal": "npm run build:tests && intern-runner config=build/tests/intern-ci",
+    "build:tests": "tsc -p tests && cp tests/index.html build/tests/index.html",
+    "lint": "tslint kendo-multi-date-select.ts tests/**/*.ts",
+    "coverage": "remap-istanbul -i coverage/coverage-final.json -t text-lcov | coveralls"
   },
+  "files": [
+    "dist/",
+    "kendo-multi-date-select.ts",
+    "tsconfig.json"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/iyegoroff/kendo-multi-date-select.git"
@@ -23,9 +39,18 @@
   },
   "homepage": "https://github.com/iyegoroff/kendo-multi-date-select#readme",
   "devDependencies": {
-    "coveralls": "^2.11.12",
-    "intern": "^3.2.3",
-    "selenium-server": "^2.53.1",
-    "uglify-js": "^2.6.4"
+    "@types/jquery": "^2.0.34",
+    "@types/kendo-ui": "^2016.3.39",
+    "coveralls": "^2.11.15",
+    "intern": "^3.4.2",
+    "remap-istanbul": "^0.8.4",
+    "tslint": "^4.1.0",
+    "tslint-config-standard": "^2.0.0",
+    "typescript": "^2.1.4",
+    "uglify-js": "^2.7.5",
+    "vrsource-tslint-rules": "^4.0.0"
+  },
+  "dependencies": {
+    "kendo-multi-calendar": "^2.1.4"
   }
 }

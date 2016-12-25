@@ -16,7 +16,7 @@ This widget is designed for multiple dates selection from drop-down calendar the
 $ npm i kendo-multi-date-select
 ```
 
-kendo-multi-date-select.min.js script should be included in your project along with <strong>kendo-multi-calendar.min.js</strong> and kendo-ui-core or kendo-ui.
+kendo-multi-date-select(.min).js script should be included in your project along with <strong>kendo-multi-calendar(.min).js</strong> and kendo-ui-core or kendo-ui.
 
 ## Usage
 
@@ -132,12 +132,3 @@ Fires when calendar popup opens.
 
 ##### close
 Fires when calendar popup closes.
-
-## Tests
-
-Tested with Intern.js.
-
-## Contributing
-
-Add tests for any new or changed functionality.
-
