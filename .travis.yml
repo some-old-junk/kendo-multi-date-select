@@ -20,7 +20,7 @@ branches:
 
 before_deploy:
   - cp ./dist/kendo-multi-date-select.min.js ./public/kendo-multi-date-select.min.js
-  - cp ./node_modules/keno-multi-calendar/dist/kendo-multi-calendar.min.js ./public/kendo-multi-calendar.min.js
+  - cp ./node_modules/kendo-multi-calendar/dist/kendo-multi-calendar.min.js ./public/kendo-multi-calendar.min.js
 
 deploy:
   - provider: npm

@@ -256,7 +256,7 @@ bdd.describe('multi date select', () => {
             .then(isPresent => {
                 expect(isPresent).to.eql(true);
             })
-            .then<boolean>(() => page.multiDateSelectIsPresent())
+            .then<boolean>(() => page.multiSelectIsPresent())
             .then(isPresent => {
                 expect(isPresent).to.eql(true);
             })
