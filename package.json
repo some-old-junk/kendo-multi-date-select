@@ -1,6 +1,6 @@
 {
   "name": "kendo-multi-date-select",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Kendo UI plugin for selecting multiple dates similar to MultiSelect.",
   "main": "dist/kendo-multi-date-select.js",
   "types": "dist/kendo-multi-date-select.d.ts",
