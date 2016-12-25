@@ -236,4 +236,38 @@ bdd.describe('multi date select', () => {
                 expect(selDates).to.eql([]);
             });
     });
+
+    bdd.it('should take in account autoClose option', () => {
+        const page = new IndexPage(remote, { autoClose: true });
+        const date = IndexPage.day(15);
+
+        return page.openCalendar()
+            .then<void>(() => page.selectDatesWithClicks([date]))
+            .then<boolean>(() => page.isCalendarOpened({ delayed: true }))
+            .then(isOpened => {
+                expect(isOpened).to.eql(false);
+            });
+    });
+
+    bdd.it('utility methods check', () => {
+        const page = new IndexPage(remote);
+
+        return page.multiCalendarIsPresent()
+            .then(isPresent => {
+                expect(isPresent).to.eql(true);
+            })
+            .then<boolean>(() => page.multiDateSelectIsPresent())
+            .then(isPresent => {
+                expect(isPresent).to.eql(true);
+            })
+            .then<boolean>(() => page.multiDateSelectIsPresent())
+            .then(isPresent => {
+                expect(isPresent).to.eql(true);
+            })
+            .then<void>(() => page.destroy())
+            .then<boolean>(() => page.multiDateSelectIsPresent())
+            .then(isPresent => {
+                expect(isPresent).to.eql(false);
+            });
+    });
 });

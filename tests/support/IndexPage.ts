@@ -8,9 +8,9 @@ export class IndexPage {
 
     private static calendarDelay = 250;
 
-    constructor(private remote: Command<any>) {
-        const code = (cb: Function) => {
-            $('#multi-date-select').kendoMultiDateSelect({ autoClose: false });
+    constructor(private remote: Command<any>, options = { autoClose: false }) {
+        const code = (autoClose: boolean, cb: Function) => {
+            $('#multi-date-select').kendoMultiDateSelect({ autoClose });
             cb();
         };
 
@@ -18,7 +18,7 @@ export class IndexPage {
             .get((require as IRequire & NodeRequire).toUrl('../index.html'))
             .setFindTimeout(2500)
             .setPageLoadTimeout(5000)
-            .executeAsync(code, []);
+            .executeAsync(code, [options.autoClose]);
     }
 
     public static day(day: number): Date {
@@ -158,12 +158,13 @@ export class IndexPage {
         );
     }
 
-    public isCalendarOpened(): Command<boolean> {
+    public isCalendarOpened(options = { delayed: false }): Command<boolean> {
         const code = () => {
             return $('.k-calendar-container').css('display') !== 'none';
         };
 
         return this.remote
+            .sleep(options.delayed ? IndexPage.calendarDelay : 0)
             .execute(code, []);
     }
 
@@ -171,6 +172,55 @@ export class IndexPage {
         return this.remote
             .findByCssSelector('#multi-date-select input')
             .isEnabled();
+    }
+
+    public multiSelectIsPresent(): Command<boolean> {
+        const code = () => {
+            const multiSelect = $('#multi-date-select')
+                .data('kendoMultiDateSelect')
+                .multiSelect();
+
+            return multiSelect instanceof kendo.ui.MultiSelect;
+        };
+
+        return this.remote
+            .execute(code, []);
+    }
+
+    public multiCalendarIsPresent(): Command<boolean> {
+        const code = () => {
+            const multiCalendar = $('#multi-date-select')
+                .data('kendoMultiDateSelect')
+                .multiCalendar();
+
+            return multiCalendar instanceof kendoExt.MultiCalendar;
+        };
+
+        return this.remote
+            .execute(code, []);
+    }
+
+    public multiDateSelectIsPresent(): Command<boolean> {
+        const code = () => {
+            const multiDateSelect = $('#multi-date-select')
+                .data('kendoMultiDateSelect');
+
+            return multiDateSelect instanceof kendoExt.MultiDateSelect;
+        };
+
+        return this.remote
+            .execute(code, []);
+    }
+
+    public destroy(): Command<void> {
+        const code = () => {
+            $('#multi-date-select')
+                .data('kendoMultiDateSelect')
+                .destroy();
+        };
+
+        return this.remote
+            .execute<void>(code, []);
     }
 
     public packedSelectedDates(): Command<Date[][]> {

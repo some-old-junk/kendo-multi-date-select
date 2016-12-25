@@ -81,6 +81,8 @@ namespace kendoExt {
             this._popup.destroy();
             this._multiSelect.destroy();
             this._multiCalendar.destroy();
+
+            super.destroy();
         }
 
         public enable(enable: boolean) {
