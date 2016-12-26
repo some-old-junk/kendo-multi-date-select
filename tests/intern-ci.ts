@@ -20,7 +20,7 @@ export const environments = [
         browserName: 'MicrosoftEdge',
         version: ['14'],
         platform: 'Windows 10',
-        recordVideo: false,
+        recordVideo: true,
         recordScreenshots: false
     },
     {

@@ -6,7 +6,7 @@ import * as keys from 'intern/dojo/node!leadfoot/keys';
 
 export class IndexPage {
 
-    private static calendarDelay = 250;
+    private static calendarDelay = 1000;
 
     constructor(private remote: Command<any>, options = { autoClose: false }) {
         const code = (autoClose: boolean, cb: Function) => {
