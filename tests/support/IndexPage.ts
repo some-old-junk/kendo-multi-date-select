@@ -6,7 +6,7 @@ import * as keys from 'intern/dojo/node!leadfoot/keys';
 
 export class IndexPage {
 
-    private static calendarDelay = 5250;
+    private static calendarDelay = 250;
 
     constructor(private remote: Command<any>, options = { autoClose: false }) {
         const code = (autoClose: boolean, cb: Function) => {
@@ -71,14 +71,13 @@ export class IndexPage {
 
     public closeCalendar(): Command<void> {
         const code = () => {
-            $('#multi-date-select input').blur();
-            $('#outside').click();
+            $('#multi-date-select')
+                .data('kendoMultiDateSelect')
+                .close();
         };
 
         return this.remote
             .execute(code, [])
-            .findById('outside')
-            .then<void>(this.mouseClick)
             .sleep(IndexPage.calendarDelay);
     }
 
