@@ -114,6 +114,8 @@ export class IndexPage {
 
     public readonly(readonly: boolean): Command<void> {
         const code = (isReadonly: boolean) => {
+            $('#multi-date-select input').blur();
+
             $('#multi-date-select')
                 .data('kendoMultiDateSelect')
                 .readonly(isReadonly);
