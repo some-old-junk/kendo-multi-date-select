@@ -52,6 +52,6 @@
     "vrsource-tslint-rules": "^4.0.0"
   },
   "dependencies": {
-    "kendo-multi-calendar": "^2.1.4"
+    "kendo-multi-calendar": "^2.2.0"
   }
 }
