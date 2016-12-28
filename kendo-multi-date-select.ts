@@ -4,6 +4,7 @@ namespace kendoExt {
         autoClose?: boolean;
         enable?: boolean;
         maxSelectedItems?: number;
+        cleanSelectedItemsOnTodayClick?: boolean;
         placeholder?: string;
         tagTemplate?: string;
         values?: Date[];
@@ -254,6 +255,7 @@ namespace kendoExt {
                     month : options.month,
                     dates: options.dates,
                     maxSelectedItems: options.maxSelectedItems,
+                    cleanSelectedItemsOnTodayClick: options.cleanSelectedItemsOnTodayClick,
                     change: change,
                     navigate: navigate
                 })
@@ -294,6 +296,7 @@ namespace kendoExt {
             animation: {},
             enable: true,
             maxSelectedItems: null,
+            cleanSelectedItemsOnTodayClick: true,
             placeholder: '',
             tagTemplate: '',
             values: null,

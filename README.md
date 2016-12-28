@@ -50,6 +50,10 @@ ___
 ##### maxSelectedItems 
 `number` (default: null)<br/>Defines the limit of selected items unless null.
 
+##### cleanSelectedItemsOnTodayClick
+`boolean` (default: true)<br/>If true - only today date will be selected after click on date in calendar footer,<br/>
+otherwise - today date will be added to selected dates.
+
 ##### placeholder
 `string` (default: '')<br/>Placeholder for empty input.
 
