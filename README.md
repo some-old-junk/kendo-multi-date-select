@@ -1,14 +1,14 @@
 kendo-multi-date-select
 =========
-[![npm version](https://badge.fury.io/js/kendo-multi-date-select.svg)](https://badge.fury.io/js/kendo-multi-date-select)
-[![Build Status](https://travis-ci.org/iyegoroff/kendo-multi-date-select.svg?branch=master)](https://travis-ci.org/iyegoroff/kendo-multi-date-select)
-[![Coverage Status](https://coveralls.io/repos/github/iyegoroff/kendo-multi-date-select/badge.svg?branch=master)](https://coveralls.io/github/iyegoroff/kendo-multi-date-select?branch=master)
-[![Dependency Status](https://david-dm.org/iyegoroff/kendo-multi-date-select/status.svg)](https://david-dm.org/iyegoroff/kendo-multi-date-select)
-[![devDependency Status](https://david-dm.org/iyegoroff/kendo-multi-date-select/dev-status.svg)](https://david-dm.org/iyegoroff/kendo-multi-date-select#info=devDependencies)
-[![typings included](https://img.shields.io/badge/typings-included-brightgreen.svg)](#typescript)
-[![npm](https://img.shields.io/npm/l/express.svg)](https://www.npmjs.com/package/kendo-multi-date-select)
+[![npm version](https://badge.fury.io/js/kendo-multi-date-select.svg?t=1483368305901)](https://badge.fury.io/js/kendo-multi-date-select)
+[![Build Status](https://travis-ci.org/iyegoroff/kendo-multi-date-select.svg?t=1483368305901&branch=master)](https://travis-ci.org/iyegoroff/kendo-multi-date-select)
+[![Coverage Status](https://coveralls.io/repos/github/iyegoroff/kendo-multi-date-select/badge.svg?t=1483368305901&branch=master)](https://coveralls.io/github/iyegoroff/kendo-multi-date-select?branch=master)
+[![Dependency Status](https://david-dm.org/iyegoroff/kendo-multi-date-select/status.svg?t=1483368305901)](https://david-dm.org/iyegoroff/kendo-multi-date-select)
+[![devDependency Status](https://david-dm.org/iyegoroff/kendo-multi-date-select/dev-status.svg?t=1483368305901)](https://david-dm.org/iyegoroff/kendo-multi-date-select#info=devDependencies)
+[![typings included](https://img.shields.io/badge/typings-included-brightgreen.svg?t=1483368305901)](#typescript)
+[![npm](https://img.shields.io/npm/l/express.svg?t=1483368305901)](https://www.npmjs.com/package/kendo-multi-date-select)
 
-[![Build Status](https://saucelabs.com/browser-matrix/iyegoroff-4.svg)](https://saucelabs.com/beta/builds/1e39e12df46644af9af98a226f211ac9)
+[![Build Status](https://saucelabs.com/browser-matrix/iyegoroff-4.svg?t=1483368305901)](https://saucelabs.com/beta/builds/1e39e12df46644af9af98a226f211ac9)
 
 This plugin is a composition of Kendo UI MultiSelect and [kendo-multi-calendar](https://www.npmjs.com/package/kendo-multi-calendar).
 
