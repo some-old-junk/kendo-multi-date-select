@@ -5,18 +5,20 @@
   "main": "dist/kendo-multi-date-select.js",
   "types": "dist/kendo-multi-date-select.d.ts",
   "scripts": {
-    "preversion": "npm run clean && npm run reinstall && npm run build && npm test",
+    "preversion": "npm run reinstall && npm run build && npm run lint && npm test && npm run break-cache-commit",
     "postversion": "git add -A . && git push && git push --tags",
     "build": "tsc && uglifyjs -c -m -o ./dist/kendo-multi-date-select.min.js ./dist/kendo-multi-date-select.js",
-    "reinstall": "rm -rf node_modules && npm i",
+    "reinstall": "npm run clean && rm -rf node_modules && npm i",
     "clean": "rm -rf dist build coverage",
-    "test": "npm run lint && npm run test:local",
+    "test": "npm run test:local",
     "test:local": "npm run build:tests && intern-runner config=build/tests/intern",
     "test:ci:minimal": "npm run build:tests && intern-runner config=build/tests/intern-ci-minimal",
     "test:ci:normal": "npm run build:tests && intern-runner config=build/tests/intern-ci",
     "build:tests": "tsc -p tests && shx cp tests/index.html build/tests/index.html",
     "lint": "tslint kendo-multi-date-select.ts tests/**/{*.ts,*.d.ts}",
-    "coverage": "remap-istanbul -i coverage/coverage-final.json -t text-lcov | coveralls"
+    "coverage": "remap-istanbul -i coverage/coverage-final.json -t text-lcov | coveralls",
+    "break-cache": "break-cache -i README.md -m \"\\.svg\" -o README.md",
+    "break-cache-commit": "npm run break-cache && git commit -am \"[skip ci] readme cache break\""
   },
   "files": [
     "dist/",
@@ -41,6 +43,7 @@
   "devDependencies": {
     "@types/jquery": "^2.0.34",
     "@types/kendo-ui": "^2016.3.39",
+    "break-cache": "^1.0.3",
     "coveralls": "^2.11.15",
     "intern": "^3.4.2",
     "remap-istanbul": "^0.8.4",
