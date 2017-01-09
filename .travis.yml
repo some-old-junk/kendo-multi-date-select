@@ -51,7 +51,7 @@ before_script:
   npm run build
 
 script:
-  - if [[ $TEST == 'minimal' ]]; then npm run test:ci:minimal; fi
+  - if [[ $TEST == 'minimal' ]]; then npm run lint && npm run test:ci:minimal; fi
   - if [[ $TEST == 'normal' ]]; then npm run test:ci:normal; fi
 after_script:
   if [[ $TEST == 'minimal' ]]; then npm run coverage; fi
