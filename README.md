@@ -8,7 +8,7 @@ kendo-multi-date-select
 [![typings included](https://img.shields.io/badge/typings-included-brightgreen.svg?t=1483368305901)](#typescript)
 [![npm](https://img.shields.io/npm/l/express.svg?t=1483368305901)](https://www.npmjs.com/package/kendo-multi-date-select)
 
-[![Build Status](https://saucelabs.com/browser-matrix/iyegoroff-4.svg?t=1483368305901)](https://saucelabs.com/beta/builds/1e39e12df46644af9af98a226f211ac9)
+[![Build Status](https://saucelabs.com/browser-matrix/iyegoroff-3.svg)](https://saucelabs.com/beta/builds/51b3168a110e4b7eb8edb379be3ccd50)
 
 This plugin is a composition of Kendo UI MultiSelect and [kendo-multi-calendar](https://www.npmjs.com/package/kendo-multi-calendar).
 
