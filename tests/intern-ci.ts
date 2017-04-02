@@ -3,14 +3,14 @@ export * from './intern-ci-minimal';
 export const environments = [
     {
         browserName: 'chrome',
-        version: ['53'],
+        version: ['56'],
         platform: ['Windows 10'],
         recordVideo: false,
         recordScreenshots: false
     },
     {
         browserName: 'firefox',
-        version: ['49', '50'],
+        version: ['51', '52'],
         platform: ['Windows 10'],
         marionette: true,
         recordVideo: false,

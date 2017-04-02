@@ -266,7 +266,7 @@ namespace kendoExt {
 
         private updateDateInterval() {
             this.values(this.values());
-        };
+        }
 
         private updateMultiSelectValues(values: Date[]) {
             this._multiSelect.setDataSource(values as any);

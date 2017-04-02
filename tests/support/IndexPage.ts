@@ -142,7 +142,7 @@ export class IndexPage {
             },
             elemCommand
         );
-    };
+    }
 
     public inputBackspaceInMultiSelect(): Command<void> {
         return this.remote

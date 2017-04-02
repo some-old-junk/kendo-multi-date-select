@@ -11,7 +11,18 @@ matrix:
     - env: TEST='normal'
 
 addons:
-  sauce_connect: true
+  sauce_connect:
+    username: 'iyegoroff-3'
+    no_ssl_bump_domains: all
+  jwt:
+    secure: >
+      ZQzPBoWH72oe/yeys4hlfXXX2U4I9zhKJYuxGDDm8OCs/QkhwHWDn7OBfIHh2ch+z3dxE9XjV8k5w/vjt3RrxCWxxEHh5Z1sy8Vb5OA3gpGQAXzZH
+      gx95YsBU9vnDscgOCkPToUrUrAzmfZ4zuCauZuZQOdk77WFr8ilRQ9Sob2G+633GcoXSLOOtlyOBnzbU4zDr/F7Ia/4nzzIcA65V31wCODijmg/vc
+      Uf5YYpwg+6+zZNMYWXf4ibYrG5f2RkouaXyb9GkyBN9DmEDzKqVkqlxKN8X4QchYh4pTZcsnqss/jzPInW0U/Wuf7p4Nyh8LeClt6vbFX2CNQwBRV
+      2qA2kuDo4a9elu7BcizhZAUKFFXI3VzQjw7CN6L9ygFMoK5a8yp5gW+jDaZf2fJr4Ok/5XVSdYxBbQA5SxZBCd4iqxQnKKPNQZU2aT1rJYz4MOdwN
+      m5NCqAMTzBxo8ZDSFyQK999YOna+pYIwvJPbPZ+1HV+ZpTRzB9S9OxTGvJHsUk4xfzqYTD5pwDDnyR/aLmbiJdb+BBLuAjSmV98tHV5cXFEAaoapw
+      x2alOgPsHVV+uZuN20OPTYkWxB/O+mw3mN+8XY60WdeSpBosq3faPP69tZeHxkNWjvXXsFnvrxY56E9GzUo8NZH/4I7XA3fI48WCLJb/JvYFRsgPC
+      QbyvU=
 
 branches:
   only:

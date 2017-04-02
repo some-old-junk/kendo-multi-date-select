@@ -46,10 +46,10 @@
     "break-cache": "^1.0.3",
     "coveralls": "^2.11.15",
     "intern": "^3.4.2",
-    "remap-istanbul": "^0.8.4",
+    "remap-istanbul": "^0.9.5",
     "shx": "^0.2.1",
-    "tslint": "^4.1.0",
-    "tslint-config-standard": "^2.0.0",
+    "tslint": "^5.0.0",
+    "tslint-config-standard": "^4.0.0",
     "typescript": "^2.1.4",
     "uglify-js": "^2.7.5",
     "vrsource-tslint-rules": "^4.0.0"
