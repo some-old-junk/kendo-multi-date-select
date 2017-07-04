@@ -1,6 +1,6 @@
 export const environments = [
     { browserName: 'safari' },
-    { browserName: 'chrome' },
+    { browserName: 'chrome' }
     // { browserName: 'firefox', marionette: true }
 ];
 
