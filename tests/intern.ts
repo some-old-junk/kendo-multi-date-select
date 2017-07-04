@@ -1,7 +1,7 @@
 export const environments = [
     { browserName: 'safari' },
     { browserName: 'chrome' },
-    { browserName: 'firefox', marionette: true }
+    // { browserName: 'firefox', marionette: true }
 ];
 
 export const tunnel = 'SeleniumTunnel';

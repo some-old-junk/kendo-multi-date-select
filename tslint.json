@@ -5,6 +5,7 @@
         "semicolon": [true, "always"],
         "no-param-reassign": true,
         "no-shadowed-variable": true,
+        "ter-indent": [true, 4],
         "space-before-function-paren": [true, {"anonymous": "always", "named": "never", "asyncArrow": "always"}]
     }
 }
