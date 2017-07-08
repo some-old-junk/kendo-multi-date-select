@@ -1,18 +1,18 @@
 {
-    "compilerOptions": {
-        "module": "umd",
-        "sourceMap": true,
-        "target": "es5",
-        "outDir": "dist",
-        "declaration": true,
-        "moduleResolution": "node",
-        "noImplicitAny": true,
-        "strictNullChecks": true,
-        "types": [
-            "kendo-multi-calendar"
-        ]
-    },
-    "include": [
-        "kendo-multi-date-select.ts"
+  "compilerOptions": {
+    "module": "umd",
+    "sourceMap": true,
+    "target": "es5",
+    "outDir": "dist",
+    "declaration": true,
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "types": [
+      "kendo-multi-calendar"
     ]
+  },
+  "include": [
+    "kendo-multi-date-select.ts"
+  ]
 }

@@ -1,22 +1,22 @@
 {
-    "compilerOptions": {
-        "target": "es5",
-        "module": "amd",
-        "removeComments": true,
-        "sourceMap": true,
-        "outDir": "../build",
-        "moduleResolution": "node",
-        "noImplicitAny": true,
-        "strictNullChecks": true,
-        "types": [
-            "intern",
-            "kendo-ui",
-            "jquery",
-            "kendo-multi-calendar"
-        ]
-    },
-    "include": [
-        "**/*.ts",
-        "../kendo-multi-date-select.ts"
+  "compilerOptions": {
+    "target": "es5",
+    "module": "amd",
+    "removeComments": true,
+    "sourceMap": true,
+    "outDir": "../build",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "types": [
+      "intern",
+      "kendo-ui",
+      "jquery",
+      "kendo-multi-calendar"
     ]
+  },
+  "include": [
+    "**/*.ts",
+    "../kendo-multi-date-select.ts"
+  ]
 }
