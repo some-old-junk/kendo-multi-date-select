@@ -123,6 +123,10 @@ namespace kendoExt {
       return this._multiCalendar.min();
     }
 
+    public value(values?: Date[]): Date[] {
+      return this.values(values);
+    }
+
     public values(values?: Date[]): Date[] {
       if (values !== undefined) {
         const min = this.min();
