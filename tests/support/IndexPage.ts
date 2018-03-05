@@ -196,6 +196,19 @@ export class IndexPage {
     );
   }
 
+  public selectedDatesViaValueMethod(): Command<Date[]> {
+    const code = () => {
+      const dates = $('#multi-date-select')
+        .data('kendoMultiDateSelect')
+        .value()
+        .map(date => new Date(date.getFullYear(), date.getMonth(), date.getDate()));
+
+      return JSON.stringify(dates);
+    };
+
+    return this.remote.execute(code, []).then(IndexPage.parseDates);
+  }
+
   private calendarSelectedDates(): Command<Date[]> {
     const code = () => {
       const dates = $('td.k-state-selected > a')

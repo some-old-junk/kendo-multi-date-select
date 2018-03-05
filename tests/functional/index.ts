@@ -263,6 +263,19 @@ describe('multi date select', () => {
       });
   });
 
+  it('should return selected dates via "value" method', () => {
+    const page = new IndexPage(remote);
+    const date = IndexPage.day(15);
+
+    return page
+      .openCalendar()
+      .then<void>(() => page.selectDatesWithClicks([date]))
+      .then<Date[]>(() => page.selectedDatesViaValueMethod())
+      .then(dates => {
+        expect(dates[0]).to.eql(date);
+      });
+  });
+
   it('utility methods check', () => {
     const page = new IndexPage(remote);
 
