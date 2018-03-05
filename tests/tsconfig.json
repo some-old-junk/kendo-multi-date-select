@@ -1,9 +1,14 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "module": "amd",
-    "removeComments": true,
-    "sourceMap": true,
+    "module": "commonjs",
+    "lib": [
+      "dom",
+      "es5",
+      "es2015.promise",
+      "es2015.symbol.wellknown"
+    ],
+    "inlineSourceMap": true,
     "outDir": "../build",
     "moduleResolution": "node",
     "noImplicitAny": true,

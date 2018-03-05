@@ -1,5 +1,13 @@
 language: node_js
 
+install:
+  - npm i -g npm@5.7.1
+  - npm ci
+
+cache:
+  directories:
+    - "$HOME/.npm"
+
 matrix:
   fast_finish: true
   include:

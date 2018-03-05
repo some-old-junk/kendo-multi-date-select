@@ -1,8 +1,7 @@
-import * as Command from 'leadfoot/Command';
-import { IRequire } from 'dojo/loader';
-import * as Promise from 'dojo/Promise';
-import Element = require('leadfoot/Element');
-import * as keys from 'intern/dojo/node!leadfoot/keys';
+import Command from '@theintern/leadfoot/Command';
+import Promise from '@dojo/shim/Promise';
+import Element from '@theintern/leadfoot/Element';
+import keys from '@theintern/leadfoot/keys';
 
 export class IndexPage {
   private static calendarDelay = 250;
@@ -14,7 +13,7 @@ export class IndexPage {
     };
 
     this.remote = remote
-      .get((require as IRequire & NodeRequire).toUrl('../index.html'))
+      .get('./build/tests/index.html')
       .setFindTimeout(2500)
       .setPageLoadTimeout(5000)
       .executeAsync(code, [options.autoClose]);

@@ -1,0 +1,60 @@
+{
+  "environments": [
+    { "browserName": "chrome", "fixSessionCapabilities": "no-detect" },
+    { "browserName": "firefox", "fixSessionCapabilities": "no-detect" }
+  ],
+  "reporters": ["runner", "htmlcoverage"],
+  "tunnelOptions": {
+    "drivers": ["chrome", "firefox", "edge", "ie"]
+  },
+  "functionalSuites": "build/tests/functional/index.js",
+  "coverage": "build/*.js",
+  "configs": {
+    "ci-minimal": {
+      "tunnel": "saucelabs",
+      "reporters": ["runner", "jsoncoverage"],
+      "maxConcurrency": 5,
+      "environments": {
+        "browserName": "chrome",
+        "version": ["63"],
+        "platform": ["Windows 10"],
+        "recordVideo": false,
+        "recordScreenshots": false
+      }
+    },
+    "ci": {
+      "extends": ["ci-minimal"],
+      "reporters": ["runner"],
+      "environments": [
+        {
+          "browserName": "chrome",
+          "version": ["60"],
+          "platform": ["Windows 10"],
+          "recordVideo": false,
+          "recordScreenshots": false
+        },
+        {
+          "browserName": "firefox",
+          "version": ["56", "57"],
+          "platform": ["Windows 10"],
+          "recordVideo": false,
+          "recordScreenshots": false
+        },
+        {
+          "browserName": "MicrosoftEdge",
+          "version": ["16"],
+          "platform": "Windows 10",
+          "recordVideo": false,
+          "recordScreenshots": false
+        },
+        {
+          "browserName": "internet explorer",
+          "version": ["10", "11"],
+          "platform": "Windows 7",
+          "recordVideo": false,
+          "recordScreenshots": false
+        }
+      ]
+    }
+  }
+}

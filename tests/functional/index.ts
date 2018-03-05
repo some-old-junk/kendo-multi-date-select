@@ -1,16 +1,17 @@
-import * as bdd from 'intern!bdd';
-import * as expect from 'intern/chai!expect';
+const { describe, it, before } = intern.getInterface('bdd');
+const { expect } = intern.getPlugin('chai');
 import { IndexPage } from '../support/IndexPage';
-import * as Command from 'leadfoot/Command';
+import Command from '@theintern/leadfoot/Command';
+import Suite from 'intern/lib/Suite';
 
-bdd.describe('multi date select', () => {
+describe('multi date select', () => {
   let remote: Command<void>;
 
-  bdd.before(function () {
-    remote = this.remote;
+  before(function ({ remote: rem }: Suite) {
+    remote = rem;
   });
 
-  bdd.it('readonly should control ability to change values', () => {
+  it('readonly should control ability to change values', () => {
     const page = new IndexPage(remote);
     const date = IndexPage.day(15);
 
@@ -33,7 +34,7 @@ bdd.describe('multi date select', () => {
       });
   });
 
-  bdd.it('enable should control ability to change values', () => {
+  it('enable should control ability to change values', () => {
     const page = new IndexPage(remote);
     const date = IndexPage.day(15);
 
@@ -56,7 +57,7 @@ bdd.describe('multi date select', () => {
       });
   });
 
-  bdd.it('should open and close calendar', () => {
+  it('should open and close calendar', () => {
     const page = new IndexPage(remote);
 
     return page
@@ -72,7 +73,7 @@ bdd.describe('multi date select', () => {
       });
   });
 
-  bdd.it('should open and close calendar with toggle', () => {
+  it('should open and close calendar with toggle', () => {
     const page = new IndexPage(remote);
 
     return page
@@ -88,7 +89,7 @@ bdd.describe('multi date select', () => {
       });
   });
 
-  bdd.it('should take in account min and max values', () => {
+  it('should take in account min and max values', () => {
     const page = new IndexPage(remote);
     const dates = [10, 15, 20].map(IndexPage.day);
     const min = IndexPage.day(12);
@@ -115,7 +116,7 @@ bdd.describe('multi date select', () => {
       });
   });
 
-  bdd.it('should add dates from calendar', () => {
+  it('should add dates from calendar', () => {
     const page = new IndexPage(remote);
     const dates = [10, 15, 20].map(IndexPage.day);
 
@@ -130,7 +131,7 @@ bdd.describe('multi date select', () => {
       });
   });
 
-  bdd.it('should add dates with typing', () => {
+  it('should add dates with typing', () => {
     const page = new IndexPage(remote);
     const dates = [10, 15, 20].map(IndexPage.day);
 
@@ -144,7 +145,7 @@ bdd.describe('multi date select', () => {
       });
   });
 
-  bdd.it('should add dates with api', () => {
+  it('should add dates with api', () => {
     const page = new IndexPage(remote);
     const dates = [10, 15, 20].map(IndexPage.day);
 
@@ -158,7 +159,7 @@ bdd.describe('multi date select', () => {
       });
   });
 
-  bdd.it('should remove dates with api', () => {
+  it('should remove dates with api', () => {
     const page = new IndexPage(remote);
     const dates = [10, 15, 20].map(IndexPage.day);
 
@@ -179,7 +180,7 @@ bdd.describe('multi date select', () => {
       });
   });
 
-  bdd.it('should remove dates from calendar', () => {
+  it('should remove dates from calendar', () => {
     const page = new IndexPage(remote);
     const dates = [10, 15, 20].map(IndexPage.day);
 
@@ -201,7 +202,7 @@ bdd.describe('multi date select', () => {
       });
   });
 
-  bdd.it('should remove dates with typing', function () {
+  it('should remove dates with typing', function () {
     const page = new IndexPage(remote);
     const dates = [10, 15, 20].map(IndexPage.day);
 
@@ -228,7 +229,7 @@ bdd.describe('multi date select', () => {
       });
   });
 
-  bdd.it('should remove dates with "x"-icons', () => {
+  it('should remove dates with "x"-icons', () => {
     const page = new IndexPage(remote);
     const dates = [10, 15, 20].map(IndexPage.day);
 
@@ -249,7 +250,7 @@ bdd.describe('multi date select', () => {
       });
   });
 
-  bdd.it('should take in account autoClose option', () => {
+  it('should take in account autoClose option', () => {
     const page = new IndexPage(remote, { autoClose: true });
     const date = IndexPage.day(15);
 
@@ -262,7 +263,7 @@ bdd.describe('multi date select', () => {
       });
   });
 
-  bdd.it('utility methods check', () => {
+  it('utility methods check', () => {
     const page = new IndexPage(remote);
 
     return page

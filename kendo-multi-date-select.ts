@@ -39,7 +39,7 @@ namespace kendoExt {
     }
 
     private static removeTime(date: Date): Date {
-      const d = new Date(date);
+      const d = new Date(date.toString());
 
       d.setMilliseconds(0);
       d.setSeconds(0);
@@ -128,7 +128,7 @@ namespace kendoExt {
         const min = this.min();
         const max = this.max();
 
-        const vs = (values || [])
+        const vs = values
           .filter(
             (date: Date) =>
               !(

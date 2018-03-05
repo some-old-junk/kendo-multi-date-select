@@ -2,7 +2,7 @@ kendo-multi-date-select
 =========
 [![npm version](https://badge.fury.io/js/kendo-multi-date-select.svg?t=1499130194308)](https://badge.fury.io/js/kendo-multi-date-select)
 [![Build Status](https://travis-ci.org/iyegoroff/kendo-multi-date-select.svg?t=1499130194308&branch=master)](https://travis-ci.org/iyegoroff/kendo-multi-date-select)
-[![Coverage Status](https://coveralls.io/repos/github/iyegoroff/kendo-multi-date-select/badge.svg?t=1499130194308&branch=master)](https://coveralls.io/github/iyegoroff/kendo-multi-date-select?branch=master)
+[![codecov](https://codecov.io/gh/iyegoroff/kendo-multi-date-select/branch/master/graph/badge.svg)](https://iyegoroff.io/gh/codecov/kendo-multi-date-select)
 [![Dependency Status](https://david-dm.org/iyegoroff/kendo-multi-date-select/status.svg?t=1499130194308)](https://david-dm.org/iyegoroff/kendo-multi-date-select)
 [![devDependency Status](https://david-dm.org/iyegoroff/kendo-multi-date-select/dev-status.svg?t=1499130194308)](https://david-dm.org/iyegoroff/kendo-multi-date-select#info=devDependencies)
 [![typings included](https://img.shields.io/badge/typings-included-brightgreen.svg?t=1499130194308)](#typescript)
