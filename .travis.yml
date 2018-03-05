@@ -12,9 +12,9 @@ matrix:
   fast_finish: true
   include:
     - env: TEST='minimal'
-      node_js: '7'
+      node_js: '9'
     - env: TEST='normal'
-      node_js: '7'
+      node_js: '9'
   allow_failures:
     - env: TEST='normal'
 
